@@ -9,7 +9,7 @@ import (
 
 	"github.com/jarcoal/httpmock"
 	"github.com/stretchr/testify/suite"
-	"resty.dev/v3"
+	"github.com/go-resty/resty/v2"
 )
 
 type PetStoreSuite struct {

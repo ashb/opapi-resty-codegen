@@ -61,7 +61,7 @@ func WithRoundTripper(transport http.RoundTripper) ClientOption {
 func WithRequestMiddleware(mw resty.RequestMiddleware) ClientOption {
 	return func(c *{{ $clientTypeName }}) error {
 		c.RequestMiddleware = append(c.RequestMiddleware, mw)
-		c.Client = c.Client.AddRequestMiddleware(mw)
+		c.Client = c.Client.OnBeforeRequest(mw)
 		return nil
 	}
 }

@@ -43,7 +43,7 @@ func Generate(opts GenerateArgs) (string, error) {
 	if opts.OutputOptions.Overlay.Strict != nil {
 		overlayOpts.Strict = *opts.OutputOptions.Overlay.Strict
 	}
-	opts.AdditionalImports = append(opts.AdditionalImports, codegen.AdditionalImport{Package: "resty.dev/v3"})
+	opts.AdditionalImports = append(opts.AdditionalImports, codegen.AdditionalImport{Package: "github.com/go-resty/resty/v2"})
 
 	if opts.Input != "" {
 		var err error
